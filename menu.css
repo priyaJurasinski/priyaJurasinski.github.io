@@ -1,0 +1,244 @@
+body{
+
+  cursor: url(img/cursor6.png) 25 25, move;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+#site-menu li, #site-menu p {
+    z-index: 2;
+    padding: 10px;
+    margin: 0px;
+    color: #ffffff;
+    font-family: 'Syne', "sans-serif";
+      font-size: .7em;
+      font-weight: 500;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    display: none;
+    text-align: center;
+    transition: all .1s;
+    /* Credit to Mike for the responsive font-sizing https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
+    cursor: url(img/cursor6.png) 25 25, move;
+  }
+  
+  #site-menu a:hover {
+    color: #a0897f;
+    transition: all .3s;
+  font-weight:bold;
+  cursor: url(img/cursor6.png) 25 25, move;
+  }
+  
+  /* hides toggle handler */
+  [type="checkbox"]:checked, [type="checkbox"]:not(:checked) {
+    display: none;
+  }
+  
+  /* menu button & animation */
+
+  .logo-button{
+    position: fixed;
+    left:10px;
+    top:10px;
+    z-index: 1;
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 0%;
+    cursor: url(img/cursor6.png) 25 25, move;
+    transition: 0.5s ease-in-out;
+background-image: url(img/logo.png);
+background-repeat: no-repeat;
+opacity:0.6;
+  }
+
+  .logo-button:hover{
+    opacity:1;
+  }
+
+  .link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: url(img/cursor6.png) 25 25, move;
+  }
+
+
+  .menu-button {
+  position: fixed;
+  right:0px;
+  top:0px;
+  z-index: 100;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  cursor: url(img/cursor6.png) 25 25, move;
+  transition: 0.5s ease-in-out;
+  }
+  
+  .line {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background:#ffffff;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .line:nth-child(1) {
+    top: 35%;
+  }
+  
+  .line:nth-child(2) {
+    top: 45%;
+  }
+  
+  .line:nth-child(3) {
+    top: 55%;
+  }
+  
+  /* animate background of lines */
+  .menu-button:hover .line::after {
+  outline-width: 2px;
+  outline-color: #f1d6bc;
+    transform: translateX(0);
+  }
+  
+  .menu-button .line::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: #f1d6bc;
+    outline-width: 2px;
+    outline-color: #f1d6bc;
+    transform: translateX(100%);
+    transition: all 0.25s ease;
+  }
+  
+  #menu-toggle:checked + .menu-button .line::after {
+    background: #f1d6bc;
+  }
+  
+  #menu-toggle:checked + .menu-button  { 
+    transform: rotate(180deg);
+    transition: transform .2s ease;
+  }
+  
+  #menu-toggle:checked + #menu-button .line:nth-child(1){
+    transform: translateY(12px) rotate(45deg);/*45deg*/
+  }
+  
+  
+  #menu-toggle:checked + #menu-button .line:nth-child(2) {
+    transform: scaleX(0);
+    opacity:0;
+  }
+  
+  #menu-toggle:checked + #menu-button .line:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);/* -45deg*/
+  }
+  
+  
+  /* animate menu in */
+  #menu-toggle:checked + #menu-button + #site-menu{
+    animation: menu-open 1.5s ease both;
+  
+  }
+  
+  #menu-toggle:checked + #menu-button + #site-menu ul > li, #site-menu p {
+    display: block;
+    animation: menu-txt-open .8s ease both;
+  }
+  
+  
+  #site-menu {
+    z-index: 2;
+    position: fixed;
+    width: 0vw;
+    height: 100vh;
+    right:0px;
+    top:0px;
+    margin: 0px; 
+    padding: 0px;
+    background-color: #35353500;
+    stroke: red;
+    stroke-width: 4px;
+    
+    animation: menu-closed 1s both;
+    cursor: url(img/cursor6.png) 25 25, move;
+    transition: .2s;
+  }
+  
+  #site-menu-titles{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+  @keyframes menu-open {
+    100% {
+        width: 15vw;
+        height: 100vh;
+        background-color: #2e2d2d;
+        
+    }
+  }
+  @keyframes menu-closed {
+    0% {
+       width: 15vw;
+       height: 100vh;
+    
+       
+    }
+  }
+  @keyframes menu-txt-open {
+    0%, 70% {
+       opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
+  
+  
+  .custom-cursor-image {
+  cursor: url(img/cursor6.png) 25 25, move;
+  }
+
+  
+a.other{
+  font-size: 1.5em;
+  /* letter-spacing: 0.1em; */
+  /* line-height: 1.5em; */
+  margin:2em;
+  text-decoration: none;
+
+      color: #353535;
+      cursor: url(img/cursor6.png) 25 25, move;   
+      
+}
+
+a.other:hover{
+ 
+  transition: all .3s;
+font-weight:bold;
+cursor: url(img/cursor6.png) 25 25, move;
+}
