@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Priya Jurasinski</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon-01.ico">
+  <link rel="stylesheet" href="Gallery/styleInteractive.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style> 
+
+.cursor{
+
+cursor: url(img/cursor6.png) 25 25, move;
+}
+
+.link {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: 1;
+cursor: url(img/cursor6.png) 25 25, move;
+}
+
+a.portfolio {
+
+text-align: left;
+    font-family: 'Libre Baskerville', "serif";
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    color: #b1a296;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+text-decoration: none;
+cursor: url(img/cursor6.png) 25 25, move;
+}
+a.other{
+  font-size: 1.5em;
+  /* letter-spacing: 0.1em; */
+  /* line-height: 1.5em; */
+  margin:2em;
+  text-decoration: none;
+
+      color: #b1a296;
+      cursor: url(img/cursor6.png) 25 25, move;   
+      
+}
+
+a.other:hover{
+ 
+  transition: all .3s;
+font-weight:bold;
+cursor: url(img/cursor6.png) 25 25, move;
+}
+
+
+a.current{
+  font-size: 1.5em;
+  /* letter-spacing: 0.1em; */
+  /* line-height: 1.5em; */
+  margin:2em;
+  text-decoration: none;
+
+      color: #ffffff;
+      cursor: url(img/cursor6.png) 25 25, move;   
+      
+}
+
+a.current:hover{
+ 
+  transition: all .3s;
+font-weight:bold;
+cursor: url(img/cursor6.png) 25 25, move;
+}
+
+
+
+.smallgrid{
+border-radius: 10px;
+border-color: #b1a296;
+border-width: .1em;
+border-style: solid;
+margin: 1em;
+display: grid;
+cursor: url(img/cursor6.png) 25 25, move;
+justify-content: center;
+align-items: center;
+grid-gap: 20px;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-auto-flow: row dense;
+grid-auto-rows: 50px;
+}
+
+</style>
+</head>
+<body style="cursor: url(img/cursor6.png) 25 25, move;">
+
+  <div class="cursor">
+
+<div class="message">
+    Sorry, your browser does not support CSS Grid. 
+  </div>
+  <section class="section">
+    <div class="smallgrid">
+    <h1></h1>
+  </div>
+
+  <div class="smallgrid">
+    <a class = "other" href="galleryGraphic.html" target="_self">Graphic Design </a>
+    <a class = "other" href="galleryWeb.html" target="_self">Website Design </a>
+    <a class = "current" href="galleryInteractive.html" target="_self">Interactive Design </a>
+   
+  
+</div>
+
+
+    <div class="grid">
+
+      <div class="item item--medium">
+        <a href="policity.html">
+          <span class="link"></span>
+        </a>
+        <div class="item__details">
+          <a class="portfolio"  href="individual.html" target="_self" >Policity</a>
+        </div>
+      </div>
+
+      
+      <div class="item item--medium">
+        <a href="keyflow.html">
+          <span class="link"></span>
+        </a>
+        <div class="item__details">
+          <a class="portfolio"  href="individual.html" target="_self" >Keyflow</a>
+        </div>
+      </div>
+      <div class="item item--medium">
+        <a href="birdcall.html">
+          <span class="link"></span>
+        </a>
+        <div class="item__details">
+          <a class="portfolio"  href="individual.html" target="_self" >Bird Call</a>
+        </div>
+      </div>
+      
+    
+      
+    </div>
+  </div>
+
+  <div class = "logo-button">
+    <a href="index.html">
+      <span class="link"></span>
+    </a>
+  </div>
+
+
+  <input type="checkbox" id="menu-toggle"/>
+  <label id="menu-button" class="menu-button" for="menu-toggle">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+  <div id="site-menu">
+    <ul id="site-menu-titles">
+     
+      <li><a href="about.html">About</a></li>
+      <li><a href="galleryGraphic.html">Portfolio</a></li>
+    </ul>
+  </div>
+
+</div>
+ 
+</body>
+</html>
